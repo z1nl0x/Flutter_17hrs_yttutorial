@@ -74,6 +74,36 @@ const allFilms = [
   ),
 ];
 
+class FilmsNotifier extends StateNotifier<List<Film>> {
+  FilmsNotifier() : super(allFilms);
+
+  void update(Film film, bool isFavorite) {
+    state = state
+        .map((thisFilm) => thisFilm.id == film.id
+            ? thisFilm.copy(isFavorite: isFavorite)
+            : thisFilm)
+        .toList();
+  }
+}
+
+enum FavoriteStatus {
+  all,
+  favorite,
+  notFavorite,
+}
+
+final favoriteStatusProvider = StateProvider<FavoriteStatus>(
+  (_) => FavoriteStatus.all,
+);
+
+final allFilmsProvider = StateNotifierProvider<FilmsNotifier, List<Film>>(
+  (ref) => FilmsNotifier(),
+);
+
+final favoriteFilmsProvider = Provider<Iterable<Film>>(
+  (ref) => ref.watch(allFilmsProvider).where((film) => film.isFavorite),
+);
+
 class App extends StatelessWidget {
   const App({super.key});
 
