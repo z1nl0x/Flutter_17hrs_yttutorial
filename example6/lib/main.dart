@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -104,6 +106,10 @@ final favoriteFilmsProvider = Provider<Iterable<Film>>(
   (ref) => ref.watch(allFilmsProvider).where((film) => film.isFavorite),
 );
 
+final notFavoriteFilmsProvider = Provider<Iterable<Film>>(
+  (ref) => ref.watch(allFilmsProvider).where((film) => !film.isFavorite),
+);
+
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -132,6 +138,66 @@ class HomePage extends ConsumerWidget {
       appBar: AppBar(
         title: Text('Home Page'),
       ),
+    );
+  }
+}
+
+class FilmsWidget extends ConsumerWidget {
+  final AlwaysAliveProviderBase<Iterable<Film>> provider;
+  const FilmsWidget({required this.provider, Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final films = ref.watch(provider);
+
+    return Expanded(
+      child: ListView.builder(
+        itemCount: films.length,
+        itemBuilder: (context, index) {
+          final film = films.elementAt(index);
+          final favoriteIcon = film.isFavorite
+              ? const Icon(Icons.favorite)
+              : const Icon(Icons.favorite_border);
+
+          return ListTile(
+            title: Text(
+              film.title,
+            ),
+            subtitle: Text(film.description),
+            trailing: IconButton(
+              onPressed: () {
+                final isFavorite = !film.isFavorite;
+                ref.read(allFilmsProvider.notifier).update(film, isFavorite);
+              },
+              icon: favoriteIcon,
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class FilterWidget extends StatelessWidget {
+  const FilterWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Consumer(
+      builder: (context, ref, child) {
+        return DropdownButton(
+          value: ref.watch(favoriteStatusProvider),
+          items: FavoriteStatus.values
+              .map((fs) => DropdownMenuItem(
+                    value: fs,
+                    child: Text(fs.toString().split('.').last),
+                  ))
+              .toList(),
+          onChanged: (FavoriteStatus? fs) {
+            ref.read(favoriteStatusProvider.state).state = fs!;
+          },
+        );
+      },
     );
   }
 }
