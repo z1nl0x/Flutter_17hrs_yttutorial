@@ -1,3 +1,47 @@
+// It looks like the deprecation message is suggesting you should "listen to the provider itself" instead of using a Stream. This is likely referring to Riverpod or Provider state management in Flutter.
+
+// How to Fix It?
+// If you're using Riverpod, instead of using StreamProvider, you should listen to the provider directly.
+
+// 1. Using Riverpod Instead of Stream
+// Before (Using StreamProvider - Deprecated)
+
+// dart
+// Copiar
+// Editar
+// final myStreamProvider = StreamProvider<int>((ref) async* {
+//   yield 1;
+//   yield 2;
+// });
+// After (Using StateNotifierProvider or AsyncNotifier)
+
+// dart
+// Copiar
+// Editar
+// final myProvider = StateProvider<int>((ref) => 0);
+// Then, listen in a Widget:
+
+// dart
+// Copiar
+// Editar
+// final value = ref.watch(myProvider);
+// 2. Using listen Instead of Stream
+// If the deprecation message says "listen to the provider itself," you should do:
+
+// dart
+// Copiar
+// Editar
+// ref.listen(myProvider, (previous, next) {
+//   print("Value changed: $next");
+// });
+// This way, your app reacts to state changes without needing a Stream.
+
+// What Should You Do?
+// If you're using StreamProvider, switch to StateProvider or AsyncNotifier in Riverpod.
+// Instead of Stream, directly watch or listen to the provider in your widget.
+// Let me know if you need help adapting your code! 
+
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 

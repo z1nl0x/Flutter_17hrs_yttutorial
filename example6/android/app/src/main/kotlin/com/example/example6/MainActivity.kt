@@ -1,4 +1,4 @@
-package br.proxy.example5
+package com.example.example6
 
 import io.flutter.embedding.android.FlutterActivity
 

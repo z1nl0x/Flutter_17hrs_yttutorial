@@ -74,7 +74,7 @@ class HomePage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Weather'),
+        title: const Text('Weather'),
       ),
       body: Column(
         children: [
