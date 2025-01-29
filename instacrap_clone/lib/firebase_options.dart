@@ -29,7 +29,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.windows:
         return windows;
       case TargetPlatform.linux:
-        return linux;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for linux - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -38,55 +41,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDNsHQAYkucQT3R0PWVJSp1i9n_DCkvbo8',
-    appId: '1:787456506208:web:b3115fcb13b2bfd6d48605',
-    messagingSenderId: '787456506208',
-    projectId: 'instacrap-clone',
-    authDomain: 'instacrap-clone.firebaseapp.com',
-    storageBucket: 'instacrap-clone.firebasestorage.app',
+    apiKey: 'AIzaSyAFH2mJ1paXyb5ZIHkcV-s-s-0ZeHd4vc0',
+    appId: '1:941334309955:web:de0149a4bb9c49d1d038f6',
+    messagingSenderId: '941334309955',
+    projectId: 'instacrap-clone-2025',
+    authDomain: 'instacrap-clone-2025.firebaseapp.com',
+    storageBucket: 'instacrap-clone-2025.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB9A5QGj3Kb3iaKrvyPfaiD8Tf9B6G2Eus',
-    appId: '1:787456506208:android:384f2596b52a6289d48605',
-    messagingSenderId: '787456506208',
-    projectId: 'instacrap-clone',
-    storageBucket: 'instacrap-clone.firebasestorage.app',
+    apiKey: 'AIzaSyCbjvwrdc0d9W7AsT7olJcRxzNfndZt3QA',
+    appId: '1:941334309955:android:579f75973557b027d038f6',
+    messagingSenderId: '941334309955',
+    projectId: 'instacrap-clone-2025',
+    storageBucket: 'instacrap-clone-2025.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAjj0VAojG_slT01MS5FaRLbEsVWuFRjX4',
-    appId: '1:787456506208:ios:f887248ffb2eb1cbd48605',
-    messagingSenderId: '787456506208',
-    projectId: 'instacrap-clone',
-    storageBucket: 'instacrap-clone.firebasestorage.app',
+    apiKey: 'AIzaSyDn8QKqjoZPtEkto6QTpCo2EQlGu7qa4G0',
+    appId: '1:941334309955:ios:3f80d45941065f42d038f6',
+    messagingSenderId: '941334309955',
+    projectId: 'instacrap-clone-2025',
+    storageBucket: 'instacrap-clone-2025.firebasestorage.app',
     iosBundleId: 'z1nl0x.corp.instacrapClone',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAjj0VAojG_slT01MS5FaRLbEsVWuFRjX4',
-    appId: '1:787456506208:ios:f887248ffb2eb1cbd48605',
-    messagingSenderId: '787456506208',
-    projectId: 'instacrap-clone',
-    storageBucket: 'instacrap-clone.firebasestorage.app',
+    apiKey: 'AIzaSyDn8QKqjoZPtEkto6QTpCo2EQlGu7qa4G0',
+    appId: '1:941334309955:ios:3f80d45941065f42d038f6',
+    messagingSenderId: '941334309955',
+    projectId: 'instacrap-clone-2025',
+    storageBucket: 'instacrap-clone-2025.firebasestorage.app',
     iosBundleId: 'z1nl0x.corp.instacrapClone',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDNsHQAYkucQT3R0PWVJSp1i9n_DCkvbo8',
-    appId: '1:787456506208:web:f0a9c801c978426ed48605',
-    messagingSenderId: '787456506208',
-    projectId: 'instacrap-clone',
-    authDomain: 'instacrap-clone.firebaseapp.com',
-    storageBucket: 'instacrap-clone.firebasestorage.app',
-  );
-
-  static const FirebaseOptions linux = FirebaseOptions(
-    apiKey: 'AIzaSyDNsHQAYkucQT3R0PWVJSp1i9n_DCkvbo8',
-    appId: '1:787456506208:web:a48b2d1648dbfbf5d48605',
-    messagingSenderId: '787456506208',
-    projectId: 'instacrap-clone',
-    authDomain: 'instacrap-clone.firebaseapp.com',
-    storageBucket: 'instacrap-clone.firebasestorage.app',
+    apiKey: 'AIzaSyAFH2mJ1paXyb5ZIHkcV-s-s-0ZeHd4vc0',
+    appId: '1:941334309955:web:708283004bd3021ed038f6',
+    messagingSenderId: '941334309955',
+    projectId: 'instacrap-clone-2025',
+    authDomain: 'instacrap-clone-2025.firebaseapp.com',
+    storageBucket: 'instacrap-clone-2025.firebasestorage.app',
   );
 }

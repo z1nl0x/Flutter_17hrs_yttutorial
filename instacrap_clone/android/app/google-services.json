@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "787456506208",
-    "project_id": "instacrap-clone",
-    "storage_bucket": "instacrap-clone.firebasestorage.app"
+    "project_number": "941334309955",
+    "project_id": "instacrap-clone-2025",
+    "storage_bucket": "instacrap-clone-2025.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:787456506208:android:384f2596b52a6289d48605",
+        "mobilesdk_app_id": "1:941334309955:android:579f75973557b027d038f6",
         "android_client_info": {
           "package_name": "z1nl0x.corp.instacrap_clone"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB9A5QGj3Kb3iaKrvyPfaiD8Tf9B6G2Eus"
+          "current_key": "AIzaSyCbjvwrdc0d9W7AsT7olJcRxzNfndZt3QA"
         }
       ],
       "services": {
