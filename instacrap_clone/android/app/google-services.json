@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "787456506208",
+    "project_id": "instacrap-clone",
+    "storage_bucket": "instacrap-clone.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787456506208:android:384f2596b52a6289d48605",
+        "android_client_info": {
+          "package_name": "z1nl0x.corp.instacrap_clone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9A5QGj3Kb3iaKrvyPfaiD8Tf9B6G2Eus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
