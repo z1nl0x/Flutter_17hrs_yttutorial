@@ -136,16 +136,37 @@ class HomePage extends ConsumerWidget {
       appBar: AppBar(
         title: const Text('Films'),
       ),
-      body: const Column(children: [
-        FilterWidget()
-      ],),
+      body: Column(
+        children: [
+          FilterWidget(),
+          Consumer(
+            builder: (context, ref, child) {
+              final filter = ref.watch(favoriteStatusProvider);
+              switch (filter) {
+                case FavoriteStatus.all:
+                  return FilmsListWidget(
+                    provider: allFilmsProvider,
+                  );
+                case FavoriteStatus.favorite:
+                  return FilmsListWidget(
+                    provider: favoriteFilmsProvider,
+                  );
+                case FavoriteStatus.notFavorite:
+                  return FilmsListWidget(
+                    provider: notFavoriteFilmsProvider,
+                  );
+              }
+            },
+          )
+        ],
+      ),
     );
   }
 }
 
-class FilmsWidget extends ConsumerWidget {
-  final AlwaysAliveProviderBase<Iterable<Film>> provider;
-  const FilmsWidget({required this.provider, Key? key}) : super(key: key);
+class FilmsListWidget extends ConsumerWidget {
+  final ProviderBase<Iterable<Film>> provider;
+  const FilmsListWidget({required this.provider, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -195,7 +216,7 @@ class FilterWidget extends StatelessWidget {
                   ))
               .toList(),
           onChanged: (FavoriteStatus? fs) {
-            ref.read(favoriteStatusProvider.state).state = fs!;
+            ref.read(favoriteStatusProvider.notifier).state = fs!;
           },
         );
       },
