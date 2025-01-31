@@ -138,7 +138,7 @@ class HomePage extends ConsumerWidget {
       ),
       body: Column(
         children: [
-          FilterWidget(),
+          const FilterWidget(),
           Consumer(
             builder: (context, ref, child) {
               final filter = ref.watch(favoriteStatusProvider);

@@ -1,1 +1,25 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"instacrap-clone-2025","appId":"1:941334309955:android:579f75973557b027d038f6","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"instacrap-clone-2025","configurations":{"android":"1:941334309955:android:579f75973557b027d038f6","ios":"1:941334309955:ios:3f80d45941065f42d038f6","macos":"1:941334309955:ios:3f80d45941065f42d038f6","web":"1:941334309955:web:de0149a4bb9c49d1d038f6","windows":"1:941334309955:web:708283004bd3021ed038f6"}}}}}}
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "instacrap-clone-2025",
+                    "appId": "1:941334309955:android:579f75973557b027d038f6",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "instacrap-clone-2025",
+                    "configurations": {
+                        "android": "1:941334309955:android:579f75973557b027d038f6",
+                        "ios": "1:941334309955:ios:3f80d45941065f42d038f6",
+                        "macos": "1:941334309955:ios:3f80d45941065f42d038f6",
+                        "web": "1:941334309955:web:de0149a4bb9c49d1d038f6",
+                        "windows": "1:941334309955:web:708283004bd3021ed038f6"
+                    }
+                }
+            }
+        }
+    }
+}
