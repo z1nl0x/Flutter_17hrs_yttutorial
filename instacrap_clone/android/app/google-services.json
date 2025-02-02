@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "523781455819",
+    "project_id": "instabug2025",
+    "storage_bucket": "instabug2025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523781455819:android:7e509125dedd8a1c03004e",
+        "android_client_info": {
+          "package_name": "com.example.instacrap_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523781455819-4qivpv1halspc7btf2v0d11fubs1fdvo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.instacrap_clone",
+            "certificate_hash": "163a437e95565863ae23d712a601c6ce96cc202b"
+          }
+        },
+        {
+          "client_id": "523781455819-62t9r9f5nkch55if33r9k738dqbgbica.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNPjZYQ_RlblPvn1fjVz_YJ4J696K7rA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523781455819-62t9r9f5nkch55if33r9k738dqbgbica.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "523781455819-0b8ao2arg2t8igh1hpehpfubpn4j881f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "z1nl0x.corp.instacrapClone"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -50,19 +50,21 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCbjvwrdc0d9W7AsT7olJcRxzNfndZt3QA',
-    appId: '1:941334309955:android:579f75973557b027d038f6',
-    messagingSenderId: '941334309955',
-    projectId: 'instacrap-clone-2025',
-    storageBucket: 'instacrap-clone-2025.firebasestorage.app',
+    apiKey: 'AIzaSyDNPjZYQ_RlblPvn1fjVz_YJ4J696K7rA0',
+    appId: '1:523781455819:android:7e509125dedd8a1c03004e',
+    messagingSenderId: '523781455819',
+    projectId: 'instabug2025',
+    storageBucket: 'instabug2025.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDn8QKqjoZPtEkto6QTpCo2EQlGu7qa4G0',
-    appId: '1:941334309955:ios:3f80d45941065f42d038f6',
-    messagingSenderId: '941334309955',
-    projectId: 'instacrap-clone-2025',
-    storageBucket: 'instacrap-clone-2025.firebasestorage.app',
+    apiKey: 'AIzaSyBNlql_5uzX9f8cj1t_oian5wRFMxTFaPs',
+    appId: '1:523781455819:ios:e7f41cc014afe8dd03004e',
+    messagingSenderId: '523781455819',
+    projectId: 'instabug2025',
+    storageBucket: 'instabug2025.firebasestorage.app',
+    androidClientId: '523781455819-4qivpv1halspc7btf2v0d11fubs1fdvo.apps.googleusercontent.com',
+    iosClientId: '523781455819-0b8ao2arg2t8igh1hpehpfubpn4j881f.apps.googleusercontent.com',
     iosBundleId: 'z1nl0x.corp.instacrapClone',
   );
 

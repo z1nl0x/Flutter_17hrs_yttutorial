@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:instacrap_clone/state/auth/backend/authenticator.dart';
 import 'firebase_options.dart';
+import 'package:firebase_app_check/firebase_app_check.dart';
 
 import 'dart:developer' as devtools show log;
 
@@ -14,6 +15,11 @@ void main() async {
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  // Ativar o App Check com Play Integrity
+  await FirebaseAppCheck.instance.activate(
+    androidProvider: AndroidProvider.playIntegrity,// Aqui estamos ativando o Play Integrity como provedor
   );
 
   runApp(
@@ -53,8 +59,8 @@ class StartPage extends StatelessWidget {
           children: [
             TextButton(
               onPressed: () async {
-                final result = Authenticator().loginWithGoogle();
-                print(result);
+                final result = await Authenticator().loginWithGoogle();
+                result.log();
               },
               child: const Text('Logar!'),
             )
