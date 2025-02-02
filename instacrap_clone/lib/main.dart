@@ -14,11 +14,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter App',
-      // theme: ThemeData(
-      //   primarySwatch: Colors.blue,
-      //   useMaterial3: true,
-      // ),
+      title: 'Instacrap',
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,

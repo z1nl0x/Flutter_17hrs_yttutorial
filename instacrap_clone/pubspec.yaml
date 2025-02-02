@@ -46,11 +46,14 @@ dependencies:
   flutter_hooks: ^0.20.5
   collection: ^1.19.0
   intl: ^0.20.2
-  video_thumbnail: ^0.5.3
   video_player: ^2.9.2
   lottie: ^3.3.1
   share_plus: ^10.1.4
   url_launcher: ^6.3.1
+  video_thumbnail: 
+    git: 
+      url: https://github.com/Shahidbangash/video_thumbnail.git 
+      ref: master
 
 dev_dependencies:
   flutter_test:
