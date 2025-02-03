@@ -62,7 +62,7 @@ class StartPage extends StatelessWidget {
                 final result = await Authenticator().loginWithGoogle();
                 result.log();
               },
-              child: const Text('Logar!'),
+              child: const Text('Logar!')
             )
           ],
         ));

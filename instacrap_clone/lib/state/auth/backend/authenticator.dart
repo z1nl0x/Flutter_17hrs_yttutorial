@@ -5,6 +5,9 @@ import 'package:instacrap_clone/state/posts/typedefs/user_id.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class Authenticator {
+
+  const Authenticator();
+
   UserId? get userId => FirebaseAuth.instance.currentUser?.uid;
   bool get isAlreadyLoggedIn => userId != null;
   String get displayName =>

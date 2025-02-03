@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "523781455819-98lav9k754qnqheghavobj16phhq227u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.instacrap_clone",
+            "certificate_hash": "26a48cf9cb67db55c41f99299d5c8395920f4f5e"
+          }
+        },
+        {
           "client_id": "523781455819-62t9r9f5nkch55if33r9k738dqbgbica.apps.googleusercontent.com",
           "client_type": 3
         }
