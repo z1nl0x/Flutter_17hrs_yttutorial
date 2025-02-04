@@ -12,9 +12,10 @@ class AuthStateNotifier extends StateNotifier<AuthState> {
   AuthStateNotifier() : super(const AuthState.unkown()) {
     if (_authenticator.isAlreadyLoggedIn) {
       state = AuthState(
-          result: AuthResult.success,
-          isLoading: false,
-          userId: _authenticator.userId);
+        result: AuthResult.success,
+        isLoading: false,
+        userId: _authenticator.userId,
+      );
     }
   }
 
